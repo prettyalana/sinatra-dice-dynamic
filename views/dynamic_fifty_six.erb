@@ -1,0 +1,18 @@
+<%# silent tag executes the Ruby code %> 
+<%#= output tag prints information to the erb file %>
+<%#= params.fetch("number_of_dice") %>
+<%#= @rolls %>
+
+<!--<h1><%#= params.fetch("number_of_dice") %>d6</h1>-->
+<h1><%= @num_dice %>d<%=@num_sides%></h1>
+<h4><%= @num_dice %> <%=@num_sides%>-sided Dice</h4>
+
+
+<ul>
+<% @rolls.each do |a_roll|%>
+<li>
+  <%=a_roll%>
+</li>
+
+<% end %>
+</ul>
